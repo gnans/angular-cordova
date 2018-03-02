@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  error(mes) {
+    console.error(mes);
+  }
 }

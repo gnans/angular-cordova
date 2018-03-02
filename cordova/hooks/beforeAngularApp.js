@@ -5,7 +5,6 @@ module.exports = function (context) {
   console.log('Building Angular application into "./www" directory.');
   const basePath = context.opts.projectRoot;
   const baseWWW = basePath + '/www';
-
   console.log(execSync(
     "ng build --target=production --environment=prod --output-path cordova/www/ --base-href .", {
       maxBuffer: 1024 * 1024,
