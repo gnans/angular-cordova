@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
-import { UtilsService } from '../../core';
+import { UtilsService } from '../../../core';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  selector: 'app-forgot-password',
+  templateUrl: './forgot-password.component.html',
+  styleUrls: ['./forgot-password.component.scss']
 })
-export class LoginComponent implements OnInit {
-  loginForm: FormGroup;
+export class ForgotPasswordComponent implements OnInit {
+  forgotPasswordForm: FormGroup;
   hide = true;
 
   constructor(private fb: FormBuilder, private utils: UtilsService) {
@@ -19,24 +19,16 @@ export class LoginComponent implements OnInit {
   }
 
   createForm() {
-    this.loginForm = new FormGroup({
+    this.forgotPasswordForm = new FormGroup({
       'email': new FormControl('', [
         Validators.required,
         Validators.email,
-      ]),
-      'password': new FormControl('', [
-        Validators.required,
-        Validators.minLength(6)
       ])
     }, { updateOn: 'blur' });
   }
 
   get email() {
-    return this.loginForm.get('email');
-  }
-
-  get password() {
-    return this.loginForm.get('password');
+    return this.forgotPasswordForm.get('email');
   }
 
   getErrorMessage(key) {
@@ -44,7 +36,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.loginForm.value);
+    console.log(this.forgotPasswordForm.value);
   }
 
 }

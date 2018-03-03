@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { CordovaService } from '../cordova/cordova.service';
+import { CordovaService } from './cordova.service';
 import 'rxjs/add/operator/map';
 
 declare var device: any;

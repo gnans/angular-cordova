@@ -17,6 +17,11 @@
       <button mat-raised-button type="submit" [disabled]=loginForm.invalid>Login</button>
     </div>
 
+    <div class="button-row" fxLayout="row">
+      <a mat-button [routerLink]="['/register']">Register</a>
+      <a mat-button [routerLink]="['/forgot']">Forgot ?</a>
+    </div>
+
   </form>
 
 </div>

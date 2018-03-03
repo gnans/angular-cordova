@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { CoreModule } from './core';
-import { SharedModule } from './shared';
-import { CordovaModule } from './cordova';
+import { CoreModule } from '@app/core';
+import { SharedModule } from '@app/shared';
+import { CordovaModule } from '@app/cordova';
 
 import { AppComponent } from './app.component';
 

@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CameraDirective } from './camera/camera.directive';
-import { DeviceService } from './device/device.service';
-import { CordovaService } from './cordova/cordova.service';
+import { CameraDirective } from './_directives/camera.directive';
+import { DeviceService } from './_services/device.service';
+import { CordovaService } from './_services/cordova.service';
 
 @NgModule({
   imports: [
@@ -12,12 +12,11 @@ import { CordovaService } from './cordova/cordova.service';
     CameraDirective
   ],
   providers: [
-    DeviceService
-  ],
-  exports: [
-    CameraDirective,
     DeviceService,
     CordovaService
+  ],
+  exports: [
+    CameraDirective
   ]
 })
 export class CordovaModule { }

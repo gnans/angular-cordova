@@ -1,6 +1,6 @@
-<div class="signup-container" fxFill fxLayout="row" fxLayoutAlign="center center">
+<div class="register-container" fxFill fxLayout="row" fxLayoutAlign="center center">
 
-    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" [ngStyle.gt-xs]="{'min-width.px': 300 }" novalidate>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" [ngStyle.gt-xs]="{'min-width.px': 300 }" novalidate>
 
       <mat-form-field fxLayout="column">
         <input matInput placeholder="Email" type="email" formControlName="email" required>
@@ -14,7 +14,11 @@
       </mat-form-field>
 
       <div fxLayout="column" fxLayoutAlign="center center">
-        <button mat-raised-button type="submit" [disabled]=signupForm.invalid>Signup</button>
+        <button mat-raised-button type="submit" [disabled]=registerForm.invalid>Register</button>
+      </div>
+
+      <div class="button-row" fxLayout="row">
+        <a mat-button [routerLink]="['/login']">Cancel</a>
       </div>
 
     </form>
