@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CoreModule } from './core';
 import { SharedModule } from './shared';
-import { CameraModule } from './camera';
+import { CordovaModule } from './cordova';
 
 import { AppComponent } from './app.component';
 
@@ -14,7 +14,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     CoreModule,
     SharedModule,
-    CameraModule
+    CordovaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
 import { Directive, HostListener, Input, EventEmitter, Output } from '@angular/core';
-import { CordovaService } from '../core';
+import { CordovaService } from '../cordova/cordova.service';
 
 declare var navigator: any;
 

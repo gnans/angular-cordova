@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CordovaService } from './cordova/cordova.service';
-import { DeviceService } from './device/device.service';
 import { UtilsService } from './utils/utils.service';
 
 @NgModule({
@@ -9,6 +7,8 @@ import { UtilsService } from './utils/utils.service';
     CommonModule
   ],
   declarations: [],
-  providers: [CordovaService, DeviceService, UtilsService]
+  providers: [
+    UtilsService
+  ]
 })
 export class CoreModule { }
