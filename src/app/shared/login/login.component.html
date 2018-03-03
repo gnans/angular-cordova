@@ -1,0 +1,22 @@
+<div class="login-container" fxFill fxLayout="row" fxLayoutAlign="center center">
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" [ngStyle.gt-xs]="{'min-width.px': 300 }" novalidate>
+
+    <mat-form-field fxLayout="column">
+      <input matInput placeholder="Email" type="email" formControlName="email" required>
+      <mat-error *ngIf="email.invalid">{{getErrorMessage(email)}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field fxLayout="column">
+      <input matInput placeholder="Password" [type]="hide ? 'password': 'text'" formControlName="password" required>
+      <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+      <mat-error *ngIf="password.invalid">{{getErrorMessage(password)}}</mat-error>
+    </mat-form-field>
+
+    <div fxLayout="column" fxLayoutAlign="center center">
+      <button mat-raised-button type="submit" [disabled]=loginForm.invalid>Login</button>
+    </div>
+
+  </form>
+
+</div>

@@ -14,11 +14,7 @@ export class CordovaService {
   }
 
   get isCordova(): boolean {
-    if (window['cordova'] !== 'undefined') {
-      return true;
-    } else {
-      return false;
-    }
+    return (window['cordova'] !== 'undefined');
   }
 
 }
